@@ -1,10 +1,13 @@
-from packaging import version
+'''
+Test for correct pandas version
+'''
 import pandas as pd
 
-MIN_VERSION = "1.5.0"
+PANDAS_VERSION = "1.5.3"
 
 def test_pandas_version():
-    assert version.parse(pd.__version__) >= version.parse(MIN_VERSION)
+    ''' Use an assertion to check the output of pd.__version__ '''
+    assert pd.__version__ == PANDAS_VERSION
 
 if __name__ == "__main__":
     test_pandas_version()
